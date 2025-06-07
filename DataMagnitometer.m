@@ -1,5 +1,5 @@
-%% Калибровка магнитометра
-clear;
+%% Данные магнитометра
+% Экспериментальные данные магнитоматра по 3 осям XYZ
 
 %% Данные (измерения датчика), вращение магнитометра вокруг всех 3-х осей
 xyz = [
@@ -907,48 +907,6 @@ plot3(zx,zy,zz)
 grid on
 hold on
 
-%% Hard Iron помехи
-x_c = (max(x)+min(x))/2;
-y_c = (max(y)+min(y))/2;
-z_c = (max(z)+min(z))/2;
+xyz = [xyz; xxyz];
+xyz = [xyz; zxyz];
 
-x_h = x - x_c;
-y_h = y - y_c;
-z_h = z - z_c;
-
-% Графики
-plot(x_h,y_h)
-plot(y_h,z_h)
-plot(x_h,z_h)
-grid on
-hold on
-
-plot3(x_h,y_h,z_h)
-grid on
-hold on
-
-%% Soft Iron помехи
-ax = max(x_h)-min(x_h);
-ay = max(y_h)-min(y_h);
-az = max(z_h)-min(z_h);
-a = [ax ay az];
-[m,i] = min(a);
-
-kx_s = a(i)/a(1);
-ky_s = a(i)/a(2);
-kz_s = a(i)/a(3);
-
-x_s = kx_s*x_h;
-y_s = ky_s*y_h;
-z_s = kz_s*z_h;
-
-% Графики
-plot(x_s,y_s)
-plot(y_s,z_s)
-plot(x_s,z_s)
-grid on
-hold on
-
-plot3(x_s,y_s,z_s)
-grid on
-hold on
