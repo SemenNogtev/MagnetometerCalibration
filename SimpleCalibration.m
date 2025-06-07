@@ -58,3 +58,4 @@ grid on; hold on
 plot3(x_s,y_s,z_s)
 xlabel("x"); ylabel("y"); zlabel("z"); grid on; hold on
 axis equal
+

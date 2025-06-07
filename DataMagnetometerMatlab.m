@@ -34,4 +34,3 @@ figure;
 scatter3(xyz(:,1),xyz(:,2),xyz(:,3));
 axis equal
 title('Данные магнитометра с эффектами Hard Iron и Soft Iron');
-

@@ -15,7 +15,7 @@ xyzc=[xc,yc,zc]*cM1';                     % матрица коррекции
 refr = 1;                                 % характерный радиус сферы
 xc=xyzc(:,1)*refr;                        % масштабирование сферы
 yc=xyzc(:,2)*refr;  
-zc=xyzc(:,3)*refr; 
+zc=xyzc(:,3)*refr;
 
 % Графики
 figure();
