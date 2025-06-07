@@ -37,7 +37,7 @@ grid on; hold on
 ax = max(x_h)-min(x_h); % поиск амплитуды
 ay = max(y_h)-min(y_h);
 az = max(z_h)-min(z_h);
-
+ 
 a = [ax ay az];
 meanA = mean(a); % (ax+ay+az)/3, средн€€ амплитуда
 
